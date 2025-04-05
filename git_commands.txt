@@ -1,0 +1,265 @@
+cybrosys@cybrosys:~/Git_session2$ git init
+Initialized empty Git repository in /home/cybrosys/Git_session2/.git/
+cybrosys@cybrosys:~/Git_session2$ git --version
+git version 2.25.1
+cybrosys@cybrosys:~/Git_session2$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+cybrosys@cybrosys:~/Git_session2$ git config-global.username
+git: 'config-global.username' is not a git command. See 'git --help'.
+cybrosys@cybrosys:~/Git_session2$ git config --global.username
+error: unknown option `global.username'
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+cybrosys@cybrosys:~/Git_session2$ git config --global.username "demo"
+error: unknown option `global.username'
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+cybrosys@cybrosys:~/Git_session2$ git config --global user.name "demo"
+cybrosys@cybrosys:~/Git_session2$ git config --list
+user.email=muhsinamusthfa76@gmail.com
+user.name=demo
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+cybrosys@cybrosys:~/Git_session2$ git config --global user.name "muhsi2001"
+cybrosys@cybrosys:~/Git_session2$ git config --global user.name
+muhsi2001
+cybrosys@cybrosys:~/Git_session2$ git pull https://github.com/muhsi2001/Git_session.git
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 2.09 KiB | 713.00 KiB/s, done.
+From https://github.com/muhsi2001/Git_session
+ * branch            HEAD       -> FETCH_HEAD
+cybrosys@cybrosys:~/Git_session2$ git pull https://github.com/muhsi2001/Git_session.git main
+From https://github.com/muhsi2001/Git_session
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+cybrosys@cybrosys:~/Git_session2$ git branch "branch2"
+cybrosys@cybrosys:~/Git_session2$ git branch 
+  branch2
+* master
+cybrosys@cybrosys:~/Git_session2$ git branch branch2
+fatal: A branch named 'branch2' already exists.
+cybrosys@cybrosys:~/Git_session2$ git branch branch3
+cybrosys@cybrosys:~/Git_session2$ git checkout branch2
+Switched to branch 'branch2'
+cybrosys@cybrosys:~/Git_session2$ git checkout -b branch4
+Switched to a new branch 'branch4'
+cybrosys@cybrosys:~/Git_session2$ git branch
+  branch2
+  branch3
+* branch4
+  master
+cybrosys@cybrosys:~/Git_session2$ git switch branch4
+Already on 'branch4'
+cybrosys@cybrosys:~/Git_session2$ git switch branch1
+fatal: invalid reference: branch1
+cybrosys@cybrosys:~/Git_session2$ git switch branch2
+Switched to branch 'branch2'
+cybrosys@cybrosys:~/Git_session2$ git status
+On branch branch2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   lblo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+cybrosys@cybrosys:~/Git_session2$ git add .
+cybrosys@cybrosys:~/Git_session2$ git status
+On branch branch2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   lblo.txt
+
+cybrosys@cybrosys:~/Git_session2$ git log
+commit 5c20a484c65a8fce8f0bb2b00f68ae5583a81fb0 (HEAD -> branch2, master, branch4, branch3)
+Author: muhsi2001 <109726147+muhsi2001@users.noreply.github.com>
+Date:   Sat Mar 29 11:19:47 2025 +0530
+
+    Add files via upload
+
+commit c26e667fb4b501fac8c97d16011a5b2b86907049
+Author: muhsi2001 <109726147+muhsi2001@users.noreply.github.com>
+Date:   Sat Mar 29 10:50:08 2025 +0530
+
+    Create README.md
+cybrosys@cybrosys:~/Git_session2$ git restore
+fatal: you must specify path(s) to restore
+cybrosys@cybrosys:~/Git_session2$ git restore --staged lblo.txt
+cybrosys@cybrosys:~/Git_session2$ git status
+On branch branch2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   lblo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+cybrosys@cybrosys:~/Git_session2$ git add .
+cybrosys@cybrosys:~/Git_session2$ git status
+On branch branch2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   lblo.txt
+
+cybrosys@cybrosys:~/Git_session2$ git commit -m "[REF] Refactored the file"
+[branch2 099ab33] [REF] Refactored the file
+ 1 file changed, 5 insertions(+)
+cybrosys@cybrosys:~/Git_session2$ git log
+commit 099ab33ad6277ce96d51421b54adda7e2917ab8d (HEAD -> branch2)
+Author: muhsi2001 <muhsinamusthfa76@gmail.com>
+Date:   Sat Mar 29 12:02:57 2025 +0530
+
+    [REF] Refactored the file
+
+commit 5c20a484c65a8fce8f0bb2b00f68ae5583a81fb0 (master, branch4, branch3)
+Author: muhsi2001 <109726147+muhsi2001@users.noreply.github.com>
+Date:   Sat Mar 29 11:19:47 2025 +0530
+
+    Add files via upload
+
+commit c26e667fb4b501fac8c97d16011a5b2b86907049
+Author: muhsi2001 <109726147+muhsi2001@users.noreply.github.com>
+Date:   Sat Mar 29 10:50:08 2025 +0530
+
+    Create README.md
+cybrosys@cybrosys:~/Git_session2$ git log --oneline
+099ab33 (HEAD -> branch2) [REF] Refactored the file
+5c20a48 (master, branch4, branch3) Add files via upload
+c26e667 Create README.md
+cybrosys@cybrosys:~/Git_session2$ echo "hello world" sample.txt
+hello world sample.txt
+cybrosys@cybrosys:~/Git_session2$ echo "hello world"> sample.txt
+cybrosys@cybrosys:~/Git_session2$ ls
+lblo.txt  README.md  sample.txt
+cybrosys@cybrosys:~/Git_session2$ cat sm
+cat: sm: No such file or directory
+cybrosys@cybrosys:~/Git_session2$ cat sample.txt 
+hello world
+cybrosys@cybrosys:~/Git_session2$ echo "Hiiiii"> sample.txt
+cybrosys@cybrosys:~/Git_session2$ echo git_commands.txt
+git_commands.txt
+cybrosys@cybrosys:~/Git_session2$ touch git_commands.txt
+cybrosys@cybrosys:~/Git_session2$ 
+
+
